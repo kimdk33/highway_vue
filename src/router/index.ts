@@ -17,6 +17,20 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/stream',
+      name: 'stream',
+      component: () => import('../views/StreamView.vue'),
+    },
+    {
+      path: '/api-docs',
+      name: 'api-docs',
+      component: () => import('../views/ApiDocsView.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 })
 
